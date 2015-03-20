@@ -1,0 +1,29 @@
+{
+  "name": "SPARQL Format",
+  "manifest_version": 2,
+  "version": "1.0",
+  "description": "Support sparql textarea (hilihgt variable, tab indent, tab completion)",
+  "content_scripts": [
+    {
+      "matches": [
+        "http://*/sparql",
+        "http://*/sparql-test"
+      ],
+      "js": [
+        "javascripts/jquery-1.11.2.min.js",
+        "javascripts/jquery-ui.min.js",
+        "javascripts/jquery.highlighttextarea.min.js",
+        "javascripts/format.js"
+      ],
+      "css" : [
+        "stylesheets/jquery-ui.min.css",
+        "stylesheets/patch-jquery-ui.resize_icon.css",
+        "stylesheets/jquery.highlighttextarea.min.css"
+      ]
+    }
+  ],
+  "web_accessible_resources": [
+    "resources/jquery-1.11.2.min.map",
+    "/images/ui-icons_222222_256x240.png"
+  ]
+}
